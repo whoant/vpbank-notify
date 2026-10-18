@@ -1,0 +1,34 @@
+[workspace]
+members = ["fcm-listener"]
+
+[package]
+name = "vpbank-notify"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Experimental native VPBank notification push CLI without a browser or history polling"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+fcm-listener = { path = "fcm-listener", version = "0.1.0" }
+fs2 = "0.4"
+prost = "0.14"
+regex = "1"
+reqwest = { version = "0.13", features = ["cookies", "json", "query"] }
+rustix = { version = "1", features = ["fs", "termios"] }
+rusqlite = { version = "0.37", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "io-util", "signal", "sync", "time"] }
+tokio-stream = "0.1"
+uuid = { version = "1", features = ["v4"] }
+zeroize = "1"
+
+[dev-dependencies]
+tempfile = "3"
+tokio = { version = "1", features = ["test-util"] }
+

@@ -1,0 +1,11 @@
+/target/
+/.state/
+*.sqlite3*
+native-registration.json
+*.log
+
+bank-session.json
+.bank-*.tmp
+/docs
+.agents
+skills-lock.json
